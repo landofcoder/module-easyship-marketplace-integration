@@ -3,7 +3,10 @@
 	<preference for="Lofmp\Easyship\Api\EasyshipAccountRepositoryInterface" type="Lofmp\Easyship\Model\EasyshipAccountRepository"/>
 	<preference for="Lofmp\Easyship\Api\Data\EasyshipAccountInterface" type="Lofmp\Easyship\Model\EasyshipAccount"/>
 	<preference for="Lofmp\Easyship\Api\Data\EasyshipAccountSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
-	<virtualType name="Lofmp\Easyship\Model\ResourceModel\EasyshipAccount\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+	<preference for="Lofmp\Easyship\Api\RegisterInterface" type="Lofmp\Easyship\Model\Register"/>
+    <preference for="Lofmp\Easyship\Api\ShipOrderInterface" type="Lofmp\Easyship\Model\ShipOrder"/>
+
+    <virtualType name="Lofmp\Easyship\Model\ResourceModel\EasyshipAccount\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
 		<arguments>
 			<argument name="mainTable" xsi:type="string">lofmp_easyship_easyshipaccount</argument>
 			<argument name="resourceModel" xsi:type="string">Lofmp\Easyship\Model\ResourceModel\EasyshipAccount\Collection</argument>
@@ -16,4 +19,18 @@
 			</argument>
 		</arguments>
 	</type>
+
+    <type name="Lofmp\Easyship\Model\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Lofmp\Easyship\Model\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">easyshipLogger</argument>
+            <argument name="handlers" xsi:type="array">
+                <item name="system" xsi:type="object">Lofmp\Easyship\Model\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
