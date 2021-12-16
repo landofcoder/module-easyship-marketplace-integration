@@ -1,0 +1,27 @@
+
+type Query {
+    
+    myEasyship (
+            id: String @doc(description: "Query by id."),
+            status: String @doc(description: "Query by status."),
+            country: String @doc(description: "Query by country."),
+            name: String @doc(description: "Query by name."),
+            method_name: String @doc(description: "Query by method_name."),
+            account_id: String @doc(description: "Query by account_id.")
+    ) : MyEasyship @resolver( class: "Lofmp\\Easyship\\Model\\Resolver\\MyEasyship") @doc(description: "Query by Get list of my easyship accounts.") 
+}
+
+type MyEasyship {
+    
+    id  : String  @doc(description: "Query by id.") 
+    name  : String  @doc(description: "Query by name.") 
+    country  : String  @doc(description: "Query by country.") 
+    method_name  : String  @doc(description: "Query by method_name.") 
+    access_token  : String  @doc(description: "Query by access_token.") 
+    status  : String  @doc(description: "Query by status.") 
+    account_id  : String  @doc(description: "Query by account_id.") 
+    webhook_secret_key  : String  @doc(description: "Query by webhook_secret_key.") 
+    use_live_rate  : String  @doc(description: "Query by use_live_rate.") 
+    fixed_rate  : String  @doc(description: "Query by fixed_rate.") 
+    created_at  : String  @doc(description: "Query by created_at.") 
+}

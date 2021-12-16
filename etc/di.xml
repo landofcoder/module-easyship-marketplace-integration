@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Lofmp\Easyship\Api\EasyshipAccountRepositoryInterface" type="Lofmp\Easyship\Model\EasyshipAccountRepository"/>
+	<preference for="Lofmp\Easyship\Api\Data\EasyshipAccountInterface" type="Lofmp\Easyship\Model\EasyshipAccount"/>
+	<preference for="Lofmp\Easyship\Api\Data\EasyshipAccountSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Lofmp\Easyship\Model\ResourceModel\EasyshipAccount\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">lofmp_easyship_easyshipaccount</argument>
+			<argument name="resourceModel" xsi:type="string">Lofmp\Easyship\Model\ResourceModel\EasyshipAccount\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="lofmp_easyship_easyshipaccount_listing_data_source" xsi:type="string">Lofmp\Easyship\Model\ResourceModel\EasyshipAccount\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

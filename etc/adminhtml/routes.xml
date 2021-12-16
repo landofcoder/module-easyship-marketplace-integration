@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="admin">
+		<route frontName="easyship" id="easyship">
+			<module before="Magento_Backend" name="Lofmp_Easyship"/>
+		</route>
+	</router>
+</config>

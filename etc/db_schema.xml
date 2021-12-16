@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="lofmp_easyship_easyshipaccount" resource="default" engine="innodb" comment="lofmp_easyship_easyshipaccount Table">
+		<column xsi:type="smallint" name="easyshipaccount_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="easyshipaccount_id"/>
+		</constraint>
+		<column name="name" nullable="true" xsi:type="text" comment="Account name"/>
+		<column name="country" nullable="true" xsi:type="text" comment="Country Code" default="US"/>
+		<column name="access_token" nullable="true" xsi:type="text" comment="Access Token"/>
+		<column name="account_id" nullable="true" xsi:type="int" comment="Account ID" default="1" identity="true" unsigned="true"/>
+		<column name="webhook_secret_key" nullable="true" xsi:type="text" comment="Webhook Secret Key"/>
+		<column name="method_name" nullable="true" xsi:type="text" comment="Method name"/>
+		<column name="use_live_rate" nullable="true" xsi:type="smallint" comment="Use Live Rate" default="0" identity="false" unsigned="true"/>
+		<column name="fixed_rate" nullable="true" xsi:type="decimal" comment="fixed_rate" scale="4" length="10"/>
+		<column name="created_at" nullable="true" xsi:type="text" comment="Created At"/>
+		<column name="seller_id" nullable="false" xsi:type="int" comment="Seller Id" identity="false" unsigned="true"/>
+		<index referenceId="LOFMP_EASYSHIP_EASYSHIPACCOUNT_SELLER_ID" indexType="btree">
+			<column name="seller_id"/>
+		</index>
+		<column name="status" nullable="true" xsi:type="smallint" comment="Status: 0: pending, 1: actived" default="0" identity="false" unsigned="true"/>
+	</table>
+</schema>

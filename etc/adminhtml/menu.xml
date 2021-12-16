@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Lofmp::top_level" title="Lofmp" module="Lofmp_Easyship" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Lofmp_Easyship::lofmp_easyship_easyshipaccount" title="EasyshipAccount" module="Lofmp_Easyship" sortOrder="9999" resource="Magento_Backend::content" parent="Lofmp::top_level" action="lofmp_easyship/easyshipaccount/index"/>
+	</menu>
+</config>

@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/lofmp-easyship/easyshipaccount" method="POST">
+		<service class="Lofmp\Easyship\Api\EasyshipAccountRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Lofmp_Easyship::EasyshipAccount_save"/>
+		</resources>
+	</route>
+	<route url="/V1/lofmp-easyship/easyshipaccount/search" method="GET">
+		<service class="Lofmp\Easyship\Api\EasyshipAccountRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Lofmp_Easyship::EasyshipAccount_view"/>
+		</resources>
+	</route>
+	<route url="/V1/lofmp-easyship/easyshipaccount/:easyshipaccountId" method="GET">
+		<service class="Lofmp\Easyship\Api\EasyshipAccountRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Lofmp_Easyship::EasyshipAccount_view"/>
+		</resources>
+	</route>
+	<route url="/V1/lofmp-easyship/easyshipaccount/:easyshipaccountId" method="PUT">
+		<service class="Lofmp\Easyship\Api\EasyshipAccountRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Lofmp_Easyship::EasyshipAccount_update"/>
+		</resources>
+	</route>
+	<route url="/V1/lofmp-easyship/easyshipaccount/:easyshipaccountId" method="DELETE">
+		<service class="Lofmp\Easyship\Api\EasyshipAccountRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Lofmp_Easyship::EasyshipAccount_delete"/>
+		</resources>
+	</route>
+</routes>
