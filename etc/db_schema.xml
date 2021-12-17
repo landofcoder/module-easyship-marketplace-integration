@@ -8,7 +8,7 @@
 		<column name="name" nullable="true" xsi:type="text" comment="Account name"/>
 		<column name="country" nullable="true" xsi:type="text" comment="Country Code" default="US"/>
 		<column name="access_token" nullable="true" xsi:type="text" comment="Access Token"/>
-		<column name="account_id" nullable="true" xsi:type="int" comment="Account ID" default="1" identity="true" unsigned="true"/>
+		<column name="account_id" nullable="true" xsi:type="int" comment="Account ID" default="1" unsigned="true"/>
 		<column name="webhook_secret_key" nullable="true" xsi:type="text" comment="Webhook Secret Key"/>
 		<column name="method_name" nullable="true" xsi:type="text" comment="Method name"/>
 		<column name="use_live_rate" nullable="true" xsi:type="smallint" comment="Use Live Rate" default="0" identity="false" unsigned="true"/>
