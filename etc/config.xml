@@ -10,7 +10,7 @@
             <easyship>
                 <active>1</active>
                 <sallowspecific>0</sallowspecific>
-                <model>Goeasyship\Shipping\Model\EasyshipCarrier</model>
+                <model>Lofmp\Easyship\Model\EasyshipCarrier</model>
                 <name>easyship</name>
                 <title>Easyship Shipping</title>
                 <type>1</type>

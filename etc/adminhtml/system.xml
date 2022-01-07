@@ -35,7 +35,7 @@
                        showInWebsite="1"
                        showInStore="1">
                     <label>Base Category</label>
-                    <source_model>Goeasyship\Shipping\Model\Source\Categories</source_model>
+                    <source_model>Lofmp\Easyship\Model\Source\Categories</source_model>
                 </field>
                 <field id="base_width" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1"
                        showInStore="1">

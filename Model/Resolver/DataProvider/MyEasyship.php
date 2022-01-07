@@ -10,15 +10,15 @@ namespace Lofmp\Easyship\Model\Resolver\DataProvider;
 class MyEasyship
 {
 
-    private $easyshipAccount;
+    private $request;
 
     /**
-     * @param \Lofmp\Easyship\Model\Resolver\EasyshipAccount $easyshipAccount
+     * @param \Lofmp\Easyship\Model\Api\Request $request
      */
     public function __construct(
-        \Lofmp\Easyship\Model\Resolver\EasyshipAccount $easyshipAccount
+        \Lofmp\Easyship\Model\Api\Request $request
     ) {
-        $this->easyshipAccount = $easyshipAccount;
+        $this->request = $request;
     }
 
     public function getMyEasyship()
